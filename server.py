@@ -1,10 +1,10 @@
-﻿import socket, threading
-
 """ Server accepts connections from clients and checks whether they are new users or existing users
 For new users it sends private_id (useful for next time logins) and public_id( to share with others to send message to user)
 If they are old users then server checks private private_id and replaces the last time socket object with latest one for communication with client
 
 For every message it receives it checks whether it should be routed to GROUP or to INDIVIDUAL and sends accordingly"""
+
+import socket, threading
 
 # groups is dictionary maintaining lists of groups and public keys of group members
 groups = {'g1':['pub1','pub3','pub5'],'g2':['pub2','pub4','pub6']}
